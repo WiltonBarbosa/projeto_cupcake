@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <title>Cupcakes da Vovó - o melhor da região!</title>
+</head>
+
+<body>
+
+    <!--HEADER-->
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img src="./assets/cupcake/logo.png" alt="Logo Cupcake"
+                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200" />
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">
+                Cupcakes da Vovó
+            </h1>
+
+            <span class="text-white font-medium"> Praça 15 de Novembro, Quiosque 2, Triunfo - PE</span>
+
+            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span class="text-white font-medium"> Seg a Dom - 9:00 às 19:00</span>
+            </div>
+
+        </div>
+    </header>
+    <!--FIM HEADER-->
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+        Conheça nossos Cupcakes
+    </h2>
+
+    <br /><br />
+
+    <!-- INÍCIO MENU-->
+    <div id="menu">
+         
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mb:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            <!--PRODUTO ITEM 1-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/cupcake/cupcake 1.png" alt="Banana com Chocolate"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Banana com Chocolate</p>
+                    <p class="text-sm">Massa de banana com cobertura de chocolate belga</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+
+                        <button class="bg-gray-900 px-5 rounde add-to-cart-btn"
+                            data-name="Banana com Chocolate"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                        
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 2-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 2.png" alt="Bicho do Pé"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Bicho do Pé</p>
+                    <p class="text-sm">Massa de baunilha com recheio e cobertura de brigadeiro de morango</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Bicho do Pé"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 3-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 3.png" alt="Brigadeiro + Chocoball "
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Brigadeiro + Chocoball</p>
+                    <p class="text-sm">Massa de chocolate, cobertura e recheio de brigadeiro e chocoball</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Brigadeiro + Chocoball "
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 4-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 4.png" alt="Brigadeiro Branco"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Brigadeiro Branco</p>
+                    <p class="text-sm">Massa de baunilha, com recheio e cobertura de leite ninho</p>
+                    <br />
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Brigadeiro Branco"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 5-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 5.png" alt="Brigadeiro"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Brigadeiro</p>
+                    <p class="text-sm">Massa de chocolate com cobertura e recheio de brigadeiro</p>
+                    <br />
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Brigadeiro"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 6-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 6.png" alt="Cappuccino"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Cappuccino</p>
+                    <p class="text-sm">Massa de chocolate e cobertura com a espuma cremosa do café combinado com
+                        chocolate belga</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Cappuccino"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 7-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 7.png" alt="Casadinho"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Casadinho</p>
+                    <p class="text-sm">Massa de chocolate com cobertura e recheio de brigadeiro</p>
+                    <br />
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Casadinho"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 8-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 8.png" alt="Charge"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Charge</p>
+                    <p class="text-sm">Massa de baunilha, recheio de caramelo e pasta de amendoim, cobertura de
+                        chocolate belga</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Charge" data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 9-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 9.png" alt="Chocolate Belga"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Chocolate Belga</p>
+                    <p class="text-sm">Massa baunilha com cobertura de chocolate belga</p>
+                    <br />
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Chocolate Belga"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 10-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 10.png" alt="Chocolate"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Chocolate</p>
+                    <p class="text-sm">Cobertura de chocolate belga</p>
+                    <br />
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Chocolate"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 11-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 11.png" alt="Cocada"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Cocada</p>
+                    <p class="text-sm">Massa de baunilha com recheio e cobertura de coco queimado</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Cocada" data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 12-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 12.png" alt="Confeti"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Confeti</p>
+                    <p class="text-sm">Com chocolate belga e a tradicional massa de baunilha</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Confeti" data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 13-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 13.png" alt="Cookies"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Cookies</p>
+                    <p class="text-sm">Massa de cookies com camada de chocolate branco</p>
+                    <br />
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Cookies" data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 14-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 14.png" alt="Crocante"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Crocante</p>
+                    <p class="text-sm">Massa de baunilha com castanhas de caju caramelado e cobertura de chocolate belga
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Crocante" data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 15-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 15.png" alt="Doce de Leite + Paçoca Amor"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Doce de Leite + Paçoca Amor</p>
+                    <p class="text-sm">Massa de baunilha, recheio e cobertura de doce e leite e paçoca AMOR</p>
+                    <br />
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Doce de Leite + Paçoca Amor"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 16-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 16.png" alt="Doce de Leite"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Doce de Leite</p>
+                    <p class="text-sm">Massa de baunilha</p>
+                    <br /><br />
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Doce de Leite"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 17-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 17.png" alt="Floresta Negra"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Floresta Negra</p>
+                    <p class="text-sm">Massa de chocolate recheio de chocolate belga, cobertura de chantilly com raspas
+                        de chocolate belga e cereja</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Floresta Negra"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 18-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 18.png" alt="Frutas Vermelhas"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Frutas Vermelhas</p>
+                    <p class="text-sm">Massa de baunilha, recheio de geleia de frutas vermelhas e cobertura de creme de
+                        manteiga com geleia de frutas vermelhas</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Frutas Vermelhas"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 19-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 19.png" alt="Kit Kat"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Kit Kat</p>
+                    <p class="text-sm">Massa de chocolate, recheio de chocolate belga com pedaços de Kit Kat e cobertura
+                        de chocolate belga com Kit Kat</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Kit Kat" data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 20-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 20.png" alt="Limão Siciliano"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Limão Siciliano</p>
+                    <p class="text-sm">Massa de iogurte natural, recheio e cobertura de brigadeiro de limão siciliano
+                    </p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Limão Siciliano"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 21-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 21.png" alt="Limão"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Limão</p>
+                    <p class="text-sm">Massa de baunilha, recheio de limão e cobertura de merengue suíço</p>
+                    <br />
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Limão" data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 22-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 22.png" alt="Milk-shake de Morango"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Milk-shake de Morango</p>
+                    <p class="text-sm">Massa de baunilha, recheio e cobertura de brigadeiro de morango e chantilly</p>
+                    <br />
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Milk-shake de Morango"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 23-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 23.png" alt="Milk-shake de Ovomaltine"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Milk-shake de Ovomaltine</p>
+                    <p class="text-sm">Massa de chocolate, recheio de creme de Ovomaltine, cobertura de chantilly com
+                        Ovomaltine</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Milk-shake de Ovomaltine"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 24-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 24.png" alt="Nhá Benta"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Nhá Benta</p>
+                    <p class="text-sm">Massa de chocolate, recheio de chocolate belga e cobertura de chantilly com
+                        casquinha de chocolate</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Nhá Benta"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 25-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 25.png" alt="Nozes"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Nozes</p>
+                    <p class="text-sm">Massa de iogurte natural, cobertura e recheio de strogonoff de nozes</p>
+                    <br />
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Nozes" data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 26-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 26.png" alt="OWL"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">OWL</p>
+                    <p class="text-sm">Massa de baunilha, recheio e cobertura de chocolate belga, decoração com bolacha
+                        e mm’s</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="OWL"
+                            data-price=" 8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 27-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 27.png" alt="Paçoca Cremosa"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Paçoca Cremosa</p>
+                    <p class="text-sm">Massa de baunilha, cobertura e recheio de paçoca</p>
+                    <br />
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Paçoca Cremosa"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 28-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 28.png" alt="Pistache"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Pistache</p>
+                    <p class="text-sm">Massa de baunilha, cobertura e recheio de brigadeiro e pistache</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Pistache" data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 29-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 29.png" alt="Prestígio"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Prestígio</p>
+                    <p class="text-sm">Massa de chocolate, cobertura e recheio de brigadeiro de coco</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Prestígio"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 30-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 30.png" alt="Red Velvet"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Red Velvet</p>
+                    <p class="text-sm">Massa de chocolate com baunilha de cor avermelhada, cobertura de cream chease</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Red Velvet"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 31-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 31.png" alt="Trufado Branco"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Trufado Branco</p>
+                    <p class="text-sm">Massa de baunilha, recheio e cobertura de trufa de chocolate branco</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Trufado Branco"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+            <!--PRODUTO ITEM 32-->
+            <div class="flex gap-2">
+                <img src="./assets/cupcake/cupcake 32.png" alt="Trufado"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Trufado</p>
+                    <p class="text-sm">Massa de baunilha, recheio e cobertura de trufa de chocolate</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Trufado" data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM PRODUTO ITEM-->
+
+        </main>
+
+        <div class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6"> <!-- ou "mx-auto max-w-7xl px2 my-2"-->
+            <h2 class="font-bold text-3xl">
+                Bebidas
+            </h2>
+        </div>
+
+        <br /><br />
+
+        <!--GRID BEBIDAS-->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mb:gap-10 mx-auto max-w-7xl px-2 mb-16"
+            id="menu">
+
+            <!--BEBIDA ITEM 1-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/bebidas/1_refri.png" alt="Coca-Cola"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Coca-Cola</p>
+                    <p class="text-sm">350ml</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-2">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" 
+                            data-name="Coca-cola"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM BEBIDA ITEM-->
+
+            <!--BEBIDA ITEM 2-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/bebidas/1_refri_zero.png" alt="Coca-Cola Zero"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Coca-Cola Zero</p>
+                    <p class="text-sm">350ml</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-2">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Coca-cola Zero"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM BEBIDA ITEM-->
+
+            <!--BEBIDA ITEM 3-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/bebidas/1_refri_litro.png" alt="Coca-Cola 1 litro"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Coca-Cola</p>
+                    <p class="text-sm">1L</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-2">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Coca-Cola 1 litro"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM BEBIDA ITEM-->
+
+            <!--BEBIDA ITEM 4-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/bebidas/2_refri.png" alt="Fanta Laranja"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Fanta Laranja</p>
+                    <p class="text-sm">350ml</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-2">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Fanta Laranja"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM BEBIDA ITEM-->
+
+            <!--BEBIDA ITEM 5-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/bebidas/2_refri_zero.png" alt="Fanta Laranja Zero"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Fanta Laranja Zero</p>
+                    <p class="text-sm">350ml</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-2">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Fanta Laranja Zero"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM BEBIDA ITEM-->
+
+            <!--BEBIDA ITEM 6-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/bebidas/2_refri_litro.png" alt="Fanta Laranja 1 litro"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Fanta Laranja</p>
+                    <p class="text-sm">1L</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-2">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Fanta Laranja 1 litro"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM BEBIDA ITEM-->
+
+            <!--BEBIDA ITEM 7-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/bebidas/3_refri.png" alt="Guaraná Antarctica"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Guaraná Antarctica</p>
+                    <p class="text-sm">350ml</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-2">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Guaraná Antarctica"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM BEBIDA ITEM-->
+
+            <!--BEBIDA ITEM 8-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/bebidas/3_refri_zero.png" alt="Guaraná Antarctica Zero"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Guaraná Antarctica Zero</p>
+                    <p class="text-sm">350ml</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-2">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Guaraná Antarctica Zero"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM BEBIDA ITEM-->
+
+            <!--BEBIDA ITEM 9-->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/bebidas/3_refri_litro.png" alt="Guaraná Antarctica 1 litro"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
+                <div class="w-full">
+                    <p class="font-bold">Guaraná Antarctica</p>
+                    <p class="text-sm">1L</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-2">
+                        <p class="font-bold text-lg">R$ 8.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Guaraná Antarctica 1 litro"
+                            data-price="8.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--FIM BEBIDA ITEM-->
+
+        </div>
+        <!-- FIM GRID BEBIDAS-->
+
+    </div>
+    <!--FIM MENU-->
+
+    <!--MODAL CART-->
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center overflow-auto hidden" id="cart-modal">
+
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col max-h-[300px] overflow-auto"></div>
+
+            <p class="font-bold"> Total: <span id="cart-total">0.00</span></p>
+
+            <p class="font-bold mt-4">Endereço de entrega:</p>
+            <input type="text" placeholder="Digite seu endereço completo..." id="address"
+                class="w-full border-2 p-1 rounded my-1" />
+            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+            </div>
+
+        </div>
+
+    </div>
+    <!--FIM MODAL CART-->
+
+    <!--BUTTON CART FOOTER-->
+    <footer class="w-full bg-red-500 py-2 fixed bottom-0 z-40 flex items-center justify-center">
+        <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+            (<span id="cart-count">0</span>)
+            Veja meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+    <!--FIM BUTTON CART FOOTER-->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
